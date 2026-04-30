@@ -55,10 +55,9 @@ Check the `examples/` directory for a complete demonstration, including a sample
 
 **Document Previews:**
 
-<p align="center">
-  <img src="assets/docx_screenshot.png" alt="DOCX Output" width="48%" />
-  <img src="assets/pdf_screenshot.png" alt="PDF Output" width="48%" />
-</p>
+| DOCX Output | PDF Output |
+| :---: | :---: |
+| <img src="assets/docx_screenshot.png" alt="DOCX Output" width="100%" /> | <img src="assets/pdf_screenshot.png" alt="PDF Output" width="100%" /> |
 
 ## Documentation
 
