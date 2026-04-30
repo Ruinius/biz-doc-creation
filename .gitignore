@@ -8,3 +8,7 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Confidential / Local documents
+tiger_work_products/
+work_products/

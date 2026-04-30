@@ -1,14 +1,17 @@
 # Product Specification
 
 ## Overview
-Brief description of the product, its purpose, and the problem it solves.
+An Antigravity skill designed to automate and streamline the creation of professional business documents. It allows users to generate high-quality documents such as Proposals, Letters of Intent (LOI), and Statements of Work (SOW), which can then be exported directly into polished Word documents and PDFs.
 
 ## Target Audience
-Who is this product for?
+- Professionals, consultants, and freelancers who frequently draft business documents.
+- The project creator, who specifically uses it for Proposals, LOIs, and SOWs.
 
 ## Core Features
-- Feature 1: Description
-- Feature 2: Description
+- **Document Generation**: AI-assisted drafting of business documents (Proposals, LOI, SOW).
+- **Professional Exporting**: High-quality export to Word (.docx) and PDF formats, maintaining professional styling and layouts.
+- **Customizable Templates**: Ability to define templates for consistent branding and document structure.
 
 ## Out of Scope
-What will *not* be included in this project.
+- Direct email integration or document signing capabilities.
+- Complex CRM integrations for the initial phase.

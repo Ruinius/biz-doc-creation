@@ -5,9 +5,15 @@
 - [x] Configure Git repository
 - [x] Add MIT License
 - [x] Establish documentation structure
+- [x] Define product specifications and system design
 
 ## Phase 2: Core Infrastructure
-- [ ] TBD
+- [x] Set up markdown generation logic
+- [x] Integrate Word (.docx) export capabilities
+- [x] Integrate PDF export capabilities
 
 ## Phase 3: Feature Implementation
-- [ ] TBD
+- [x] Implement Proposal generation skill
+- [ ] Implement Letter of Intent (LOI) generation skill
+- [ ] Implement Statement of Work (SOW) generation skill
+- [x] Test and refine professional styling
