@@ -12,25 +12,31 @@ An Antigravity skill designed to automate and streamline the creation of profess
 > This is a personal project built for my own use. You are welcome to fork it and adapt it however you like — but I will not be reviewing or merging pull requests. No hard feelings!
 
 ## Overview
+
 This project uses the Antigravity agent to draft complex business documents based on simple context files. It includes Python-based export scripts that natively convert the generated Markdown into beautifully styled, executive-ready `.docx` and `.pdf` files.
 
 Currently supported document types:
+
 - **Proposals / Counseling SOWs**
-- Letters of Intent (LOI) *(Planned)*
-- Statements of Work (SOW) *(Planned)*
+- Letters of Intent (LOI) _(Planned)_
+- Statements of Work (SOW) _(Planned)_
 
 ## Getting Started
 
 ### Prerequisites
+
 - Python 3.x
 - [uv](https://github.com/astral-sh/uv) (Python package manager)
 
 ### Installation
+
 Clone the repository and install the necessary dependencies using `uv`:
+
 ```powershell
 uv sync
 ```
-*(Alternatively, you can manually add the dependencies if needed: `uv add python-docx markdown xhtml2pdf`)*
+
+_(Alternatively, you can manually add the dependencies if needed: `uv add python-docx markdown xhtml2pdf`)_
 
 ## Usage
 
@@ -44,9 +50,18 @@ uv run python skills/scripts/export_pdf.py work_products/my_client_proposal.md w
 ```
 
 ### Examples
+
 Check the `examples/` directory for a complete demonstration, including a sample context file, the generated markdown proposal, and the final exported `.docx` and `.pdf` formats.
 
+**Document Previews:**
+
+<p align="center">
+  <img src="assets/docx_screenshot.png" alt="DOCX Output" width="48%" />
+  <img src="assets/pdf_screenshot.png" alt="PDF Output" width="48%" />
+</p>
+
 ## Documentation
+
 - [Product Specification](docs/PRODUCT_SPEC.md)
 - [System Design](docs/SYSTEM_DESIGN.md)
 - [Roadmap](docs/ROADMAP.md)
