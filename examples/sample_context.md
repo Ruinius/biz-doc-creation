@@ -1,4 +1,4 @@
-# Business Context: Senior Advisory Engagement for Lumina Systems
+# Business Context: AI Strategist Engagement for Lumina Systems
 
 *Context: This document is based on notes from my call with Sarah Jenkins on April 28, 2026.*
 
@@ -7,15 +7,15 @@
 - **Client Name:** Lumina Systems (North America)
 - **Internal Group:** Strategic Operations & Innovation
 - **Contract Location:** New York, NY, USA
-- **Target Role/Title:** Senior Strategic Advisor, AI Implementation
+- **Target Role/Title:** External AI Strategist
 - **Engagement Objective:** Provide strategic support across AI Infrastructure Readiness and Operational Efficiency Blueprints.
 
 ## 2. Contract Terms & Timeline
 
 There are two proposed structures for the engagement timeline:
 
-- **Option A:** Initial 6-month term with an option for a 6-month extension.
-- **Option B:** Initial 12-month term with a 30-day termination clause.
+- **Option A:** Initial 12-month term with a 30-day termination clause. (Recommended)
+- **Option B:** Initial 6-month term with an option for a 6-month extension.
 
 ## 3. Potential Scope of Work
 
@@ -35,21 +35,23 @@ _Note: The exact deliverables for the initial period will be selected from the f
 
 ## 4. Compensation & Fee Structure
 
-**Target Compensation:** ~$450,000 USD per annum assuming full utilization, reflecting the higher cost structure of independent contracting.
+**Comparable FTE Total Cash Compensation:** ~$300,000 USD per annum.
 
-### Proposal Option 1: Deliverable & Performance-Based
+**Market Reference:** Contract AI project managers in the California market command $1,500 to $2,000 USD per diem for high-utilization engagements.
 
-- **Retainer:** $8,000 USD per month.
-- **Work Product / Execution Components:** Structured around specific ~3-month deliverables (approx. $100,000 USD each):
+### Proposal Option 1: Retainer + Per Diem (Recommended)
+
+- **Retainer:** $3,000 USD per month.
+- **Per Diem:** $1,700 USD per day (billed based on client demand and specific projects).
+- **Mechanism:** Required days are estimated at the start of each project. If the timeline changes, billed days are adjusted in writing to reflect actual time spent.
+
+### Proposal Option 2: Deliverable & Performance-Based
+
+- **Retainer:** $3,000 USD per month.
+- **Work Product / Execution Components:** Structured around specific ~3-month deliverables (approx. $50,000 USD each):
   1. _Infrastructure Readiness Audit:_ Fees payable upon work product delivery.
   2. _Operational Efficiency Roadmap:_ Fees payable upon work product delivery.
   3. _Pilot Implementation Support (up to 2 efforts):_ Fees payable upon milestone completion.
-- **Execution Success:** Additional compensation tied to the successful reduction in operational costs (5% target) by the client.
-
-### Proposal Option 2: Retainer + Per Diem (Recommended)
-
-- **Retainer:** $8,000 USD per month.
-- **Per Diem:** $4,000 USD per day (billed based on client demand and specific projects).
 
 ## 5. Materials & Access Required
 
@@ -58,6 +60,7 @@ To successfully execute the engagement, the following will be required from Lumi
 1. Lumina Systems credentials and corporate email address.
 2. Lumina-issued contractor laptop.
 3. Enterprise software accounts (e.g., Azure AI Studio, Jira Enterprise).
+4. Weekly access to the Strategic Operations & Innovation leadership team.
 
 ## 6. Outstanding Questions & Next Steps
 

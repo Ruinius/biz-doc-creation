@@ -1,7 +1,7 @@
 # System Design
 
 ## Architecture Overview
-The system will operate as an Antigravity skill, taking natural language inputs and document requirements to generate structured business documents. It will use a templating engine to format the content and document generation libraries to produce Word and PDF outputs.
+The system operates as an Antigravity skill, using structured markdown prompt files (skills) and client-specific context files to generate professional business documents via AI. The AI agent reads a context file containing engagement details, applies the persona and formatting rules defined in the skill, and produces a polished markdown document. Python-based export scripts then convert the markdown into Word and PDF outputs.
 
 ## Tech Stack
 - **Language**: Python
@@ -11,19 +11,20 @@ The system will operate as an Antigravity skill, taking natural language inputs 
   - `xhtml2pdf` and `markdown` for PDF document generation.
 
 ## Data Models
-- **Document Request**: Contains user prompt, document type (Proposal, LOI, SOW), and required fields.
-- **Template**: Defines the structure and style of the output document.
-- **Generated Document**: The finalized content ready for export.
+- **Context File**: A markdown document containing engagement-specific data (client name, scope of work, fee structures, timeline options, and required materials).
+- **Skill File**: A markdown prompt defining the AI persona, tone, formatting rules, and standard document sections.
+- **Generated Document**: The finalized markdown content ready for export to `.docx` and `.pdf`.
 
 ## Module Boundaries
-- **Input Parser**: Interprets the user's intent and extracts required information.
-- **Content Generator**: Interfaces with the LLM to draft the document body based on the parsed input and template.
-- **Export Engine**: Takes the generated content and compiles it into `.docx` and `.pdf` files.
+- **Skill Prompts** (`skills/`): Define the AI agent's persona, writing style, and document structure for each document type.
+- **Export Scripts** (`skills/scripts/`): Python scripts that convert generated markdown into professionally styled Word and PDF files.
+- **Context Files** (user-created): Provide the engagement-specific data that the AI agent uses to populate the document.
 
 ## Directory Structure
 - `.agents/`: Antigravity workspace rules and operational behaviors.
+- `assets/`: Screenshots and media used in the README.
 - `docs/`: Project documentation and architecture notes.
-- `examples/`: Sample documents and reference materials for the skill to read and use as context.
+- `examples/`: Sample context files, generated proposals, and exported documents for reference.
 - `skills/`: Contains the logic and prompt guidelines for different document generation skills (e.g., `skills/proposal/`).
   - `skills/scripts/`: Python scripts for exporting generated markdown into Word and PDF formats.
 - `<User-created folder>` (e.g., `work_products/`): A directory for generating and storing confidential, personal documents. Users should create their own directory for this purpose and ensure it is added to `.gitignore`.

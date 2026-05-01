@@ -2,6 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python)
 ![uv](https://img.shields.io/badge/package%20manager-uv-blueviolet?style=flat-square)
+![Version](https://img.shields.io/github/v/tag/Ruinius/biz-doc-creation?label=version&style=flat-square)
 ![License](https://img.shields.io/github/license/Ruinius/biz-doc-creation?style=flat-square)
 ![Status](https://img.shields.io/badge/status-personal%20project-orange?style=flat-square)
 ![PRs](https://img.shields.io/badge/PRs-not%20reviewed-red?style=flat-square)
@@ -10,6 +11,12 @@ An Antigravity skill designed to automate and streamline the creation of profess
 
 > **⚠️ Personal Project Notice**
 > This is a personal project built for my own use. You are welcome to fork it and adapt it however you like — but I will not be reviewing or merging pull requests. No hard feelings!
+
+## Why I Built This
+
+I was writing a proposal for a real advisory engagement and realized the process—drafting, formatting, exporting to Word and PDF—was tedious and highly repeatable. So I built an AI skill to automate it. Now, every time I need a new proposal, I write a simple context file and the agent drafts, styles, and exports a board-ready document in seconds.
+
+I'm sharing this publicly because I think every external advisor, independent consultant, and freelancer deserves a tool like this. Fork it, swap in your own persona and fee structures, and never hand-format a proposal again.
 
 ## Overview
 
