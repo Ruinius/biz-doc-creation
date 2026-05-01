@@ -34,7 +34,12 @@ Keep the structure streamlined and elegant. The title should follow the format: 
 
 1. **Context and Objective**: A narrative summary reflecting your understanding of the client's strategic challenge and the purpose of your advisory role, including the specific workstreams and type of work the customer wants completed. Be specific about the engagement scope—name the workstreams, describe the methodology (e.g., prototype development, blueprint creation), and articulate the strategic rationale.
 2. **About [Name]** _(optional but recommended)_: A brief professional biography written in third person that establishes credibility. Include relevant roles, notable clients or companies, and years of experience. Keep to one focused paragraph.
-3. **Operating Principles**: A description of how you will partner with the executive team, your operating philosophy, and the focus areas of your work. Emphasize collaboration, execution bias, and integration into existing workflows.
+3. **Operating Principles**: A description of how you will partner with the executive team, your operating philosophy, and the focus areas of your work. This section should be presented as a punchy, bulleted list of core principles that must include:
+   - **Value creation focus:** Emphasizing alpha generation and tangible business impact.
+   - **Bias towards action:** Moving rapidly from theoretical assessment to execution, using fact-based proof (e.g., prototypes and implementations) rather than static reports.
+   - **Deep collaboration:** Working closely side-by-side as a fully integrated thought partner with the client's leadership and teams.
+   - **AI-native methodology:** Working aggressively with AI agents to accelerate engagement tasks and compress timelines. Include a concrete proof point (e.g., noting that the proposal itself was drafted using an AI agent skill you built and published on GitHub).
+   - **Capability building:** Spreading the use of AI agents into the client's own teams to build lasting organizational capability.
 4. **Value and Impact**: A paragraph discussing the expected outcomes, alignment with the client's goals, and how success will be measured or defined. Be concrete about what success looks like—tie it back to the client's business objectives.
 5. **Professional Fees**: This section requires careful structure:
    - Open with a brief paragraph recommending a fee model approach.

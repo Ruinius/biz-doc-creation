@@ -6,6 +6,14 @@ def export_to_pdf(markdown_path, pdf_path):
     with open(markdown_path, 'r', encoding='utf-8') as f:
         md_text = f.read()
 
+    # Sanitize text to replace special unicode characters that render as squares in xhtml2pdf
+    md_text = md_text.replace('\u2011', '-') # Non-breaking hyphen
+    md_text = md_text.replace('\u2012', '-') # Figure dash
+    md_text = md_text.replace('\u2013', '-') # En dash
+    md_text = md_text.replace('\u2014', '--') # Em dash
+    md_text = md_text.replace('\u2018', "'").replace('\u2019', "'") # Smart single quotes
+    md_text = md_text.replace('\u201C', '"').replace('\u201D', '"') # Smart double quotes
+
     # Convert markdown to html
     html_content = markdown.markdown(md_text, extensions=['extra'])
 
@@ -55,6 +63,29 @@ def export_to_pdf(markdown_path, pdf_path):
             strong {{
                 font-weight: bold;
                 color: #1a252f;
+            }}
+            table {{
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                font-size: 10.5pt;
+            }}
+            th {{
+                background-color: #2c3e50;
+                color: #ffffff;
+                text-align: left;
+                padding: 10px;
+                border: 1px solid #2c3e50;
+                font-weight: bold;
+            }}
+            td {{
+                padding: 10px;
+                border: 1px solid #bdc3c7;
+                color: #333;
+            }}
+            tr:nth-child(even) {{
+                background-color: #f8f9fa;
             }}
         </style>
     </head>
