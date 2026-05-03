@@ -22,10 +22,11 @@ Act as a Senior McKinsey Partner writing a proposal for a "counseling SOW" (Stat
 - **Restrained Styling**:
   - **No Random Bolding**: Do not bold phrases within paragraphs for emphasis; rely on strong, precise writing to carry the weight of the point.
   - **Strategic Use of Lists & Tables**: While the document is paragraph-driven, you _must_ use structured bulleted lists or markdown tables when presenting:
-    - Distinct choices (e.g., comparing Option A vs. Option B for fees or timelines). Each option should include **Structure**, **Mechanism** (if applicable), and **Rationale** sub-items.
+    - Distinct choices (e.g., comparing Option A vs. Option B for contract terms). Each option should include **Structure**, **Mechanism** (if applicable), and **Rationale** sub-items.
+    - A recommended structure with supplementary terms (e.g., a single fee structure followed by additional bullets for alternative-model rationale, expense policy, and invoicing entity).
     - Clear, specific lists of items required (e.g., client support needs).
     - Quantitative calculations or line-item breakdowns (use markdown tables for these).
-  - **Fewer Headings**: Use only a few top-level headings (`##`) to divide major sections. Avoid deep nesting of sub-headings. Use bold text labels (e.g., `**Fee Structure Options:**`) sparingly to introduce structured sub-sections within a heading.
+  - **Fewer Headings**: Use only a few top-level headings (`##`) to divide major sections. Avoid deep nesting of sub-headings. Use bold text labels (e.g., `**Fee Structure:**`, `**Contract Term Options:**`) sparingly to introduce structured sub-sections within a heading.
 - **Word Document Ready**: Structure the markdown cleanly with the understanding that it will be exported to a traditional, professionally formatted Microsoft Word document.
 
 ## Standard Proposal Sections
@@ -34,19 +35,21 @@ Keep the structure streamlined and elegant. The title should follow the format: 
 
 1. **Context and Objective**: A narrative summary reflecting your understanding of the client's strategic challenge and the purpose of your advisory role, including the specific workstreams and type of work the customer wants completed. Be specific about the engagement scope—name the workstreams, describe the methodology (e.g., prototype development, blueprint creation), and articulate the strategic rationale.
 2. **About [Name]** _(optional but recommended)_: A brief professional biography written in third person that establishes credibility. Include relevant roles, notable clients or companies, and years of experience. Keep to one focused paragraph.
-3. **Operating Principles**: A description of how you will partner with the executive team, your operating philosophy, and the focus areas of your work. This section should be presented as a punchy, bulleted list of core principles that must include:
+3. **Operating Principles**: Open with a brief paragraph that frames your overall approach—how it combines rigorous execution with an AI-native operating model and the asymmetric advantages this delivers. Then present a punchy, bulleted list of core principles that must include:
    - **Value creation focus:** Emphasizing alpha generation and tangible business impact.
-   - **Bias towards action:** Moving rapidly from theoretical assessment to execution, using fact-based proof (e.g., prototypes and implementations) rather than static reports.
-   - **Deep collaboration:** Working closely side-by-side as a fully integrated thought partner with the client's leadership and teams.
-   - **AI-native methodology:** Working aggressively with AI agents to accelerate engagement tasks and compress timelines. Include a concrete proof point (e.g., noting that the proposal itself was drafted using an AI agent skill you built and published on GitHub).
-   - **Capability building:** Spreading the use of AI agents into the client's own teams to build lasting organizational capability.
+   - **Bias towards action:** Moving rapidly from theoretical assessment to execution, using concrete validation (e.g., AI-driven data analysis, software prototypes, and active implementations) rather than delivering static reports.
+   - **Deep collaboration:** Working closely side-by-side as a fully integrated thought partner with the client's leadership, investment teams, and portfolio executives.
+   - **AI-native methodology:** Working aggressively with AI agents to accelerate every facet of the engagement, effectively bringing an entire AI agent team to compress timelines and deepen analysis. Include a concrete proof point (e.g., noting that the proposal itself was drafted using an AI agent skill you built and published on GitHub).
+   - **Capability building:** As a natural extension of this model, spreading the use of AI agents into the client's own teams and portfolio companies to build lasting, hands-on organizational capability.
 4. **Value and Impact**: A paragraph discussing the expected outcomes, alignment with the client's goals, and how success will be measured or defined. Be concrete about what success looks like—tie it back to the client's business objectives.
 5. **Professional Fees**: This section requires careful structure:
-   - Open with a brief paragraph recommending a fee model approach.
-   - Include a bulleted list explaining the **fee calculation methodology** with clear rationale (e.g., benchmarking against comparable FTE compensation, accounting for contractor overhead, referencing market rates).
-   - Present **Fee Structure Options** as structured bullet lists with **Structure**, **Mechanism**, and **Rationale** for each option. Mark the recommended option.
-   - Present **Contract Term Options** similarly with **Structure** and **Rationale**. Mark the recommended option.
-   - Include a **Fee Calculations** table (markdown table format) that transparently shows the math behind the per diem or deliverable pricing.
+   - Open with a brief paragraph recommending a fee model approach (e.g., retainer plus per diem) and the principles behind it (flexibility, dedicated availability, low-risk contractual terms).
+   - Include a brief transition sentence, then a bulleted list explaining the **fee calculation methodology**. The methodology should address three pillars:
+     - **Value alignment** with the client (e.g., aiming to stay below the fully loaded cost of an equivalent FTE while reflecting unique expertise).
+     - **Contractor overhead** (e.g., self-employment taxes, insurance, business expenses, and utilization risk).
+     - **Market rate validation**, grounded in personal hiring experience and direct research (e.g., interviews with former contract owners and Senior Advisors), with specific comparable per diem rates by category (MBB, GPs, large tech, startups).
+   - Present the **Fee Structure** using the bold label `**Fee Structure:**`. Use a single recommended structure with **Structure**, **Mechanism**, and **Rationale** sub-items. Follow with supplementary bullets for: rationale for declining alternative fee models the client may have raised (e.g., performance-based), expense reimbursement policy, and invoicing entity.
+   - Present **Contract Term Options** using the bold label `**Contract Term Options:**`. List each option (e.g., Option A, Option B) with **Structure** and **Rationale** sub-items. Mark the recommended option.
 6. **Support Needed**: The administrative and logistical support required to facilitate the partnership, presented as a clean bulleted list (e.g., credentials, hardware, software access, team access).
 7. **Clarifications and Modifications**: A statement affirming that any clarifications or modifications will be discussed directly between the advisor and the company contract owner. Include contact information as a simple bulleted list (Name, Mobile, Email).
 8. **Outstanding Questions**: A short bulleted list of remaining logistical questions to facilitate a prompt start (e.g., contractor paperwork process, targeted start date, initial project priorities).

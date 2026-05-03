@@ -10,11 +10,30 @@ This file serves as the primary index for the project's documentation, located i
 *Always keep this index and the corresponding documentation up-to-date with code changes.*
 
 ## Project Folder Structure
-- `.agents/`: Antigravity workspace rules and behaviors.
-- `assets/`: Screenshots and media used in the README.
-- `docs/`: Core project documentation (specs, design, roadmap).
-- `examples/`: Sample context files, generated proposals, and exported documents for reference.
-- `skills/`: Antigravity skill definitions (e.g., proposal generation).
-  - `proposal/`: Specific instructions and guidelines for proposal documents.
-  - `scripts/`: Python scripts for exporting generated markdown into Word and PDF formats.
-- `<User-created folder>` (e.g., `work_products/`): Local directory for generating and storing actual user documents. Users should create their own directory for this purpose and ensure it is added to `.gitignore`.
+
+```text
+biz-doc-creation/
+├── .agents/                # Antigravity workspace rules and behaviors
+├── assets/                 # Brand assets and images
+├── docs/                   # Core project documentation
+│   ├── DOC_INDEX.md        # This file
+│   ├── PRODUCT_SPEC.md     # Product goals and features
+│   ├── ROADMAP.md          # Project milestones
+│   └── SYSTEM_DESIGN.md    # Architecture and data models
+├── examples/               # Reference examples for testing and demonstration
+│   ├── sample_context.md   # Baseline context file for a fictional client
+│   ├── lumina_proposal.md  # Generated proposal (Jane Doe)
+│   ├── lumina_proposal.docx# Word export of the sample proposal
+│   └── lumina_proposal.pdf # PDF export of the sample proposal
+├── skills/                 # Antigravity skill definitions and logic
+│   ├── proposal/           # Proposal generation guidelines
+│   │   └── proposal_writer.md
+│   └── scripts/            # Export utilities
+│       ├── export_docx.py  # Markdown to Word converter
+│       └── export_pdf.py   # Markdown to PDF converter
+├── tiger_work_products/    # User active working directory (GIT IGNORED)
+└── pyproject.toml          # Project dependencies
+```
+
+## Active Skills
+- **Proposal Writer**: Guided writing for high-value strategic proposals. Located in `skills/proposal/proposal_writer.md`.

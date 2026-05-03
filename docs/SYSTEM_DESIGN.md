@@ -23,8 +23,8 @@ The system operates as an Antigravity skill, using structured markdown prompt fi
 ## Directory Structure
 - `.agents/`: Antigravity workspace rules and operational behaviors.
 - `assets/`: Screenshots and media used in the README.
-- `docs/`: Project documentation and architecture notes.
+- `docs/`: Core project documentation (specs, design, roadmap).
 - `examples/`: Sample context files, generated proposals, and exported documents for reference.
-- `skills/`: Contains the logic and prompt guidelines for different document generation skills (e.g., `skills/proposal/`).
+- `skills/`: Contains the logic and prompt guidelines for different document generation skills.
   - `skills/scripts/`: Python scripts for exporting generated markdown into Word and PDF formats.
-- `<User-created folder>` (e.g., `work_products/`): A directory for generating and storing confidential, personal documents. Users should create their own directory for this purpose and ensure it is added to `.gitignore`.
+- `tiger_work_products/`: User-specific directory for generating and storing active work products. This directory is typically added to `.gitignore`.
