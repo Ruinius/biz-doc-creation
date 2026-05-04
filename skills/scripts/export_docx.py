@@ -38,32 +38,19 @@ def set_cell_shading(cell, hex_color):
     cell._tc.get_or_add_tcPr().append(shading_elm)
 
 def style_table(table):
-    """Apply professional formatting to a completed table: header shading,
-    alternating row bands, cell padding, and consistent font sizing."""
-    HEADER_COLOR = "2C3E50"
-    ALT_ROW_COLOR = "F2F3F4"
+    """Apply clean, simple formatting to a completed table: cell padding,
+    consistent font sizing, and bold header text. No background shading."""
     CELL_PAD = 80  # ~1.4mm in twips
 
     for row_idx, row in enumerate(table.rows):
         for cell in row.cells:
-            # Generous padding on every cell
             set_cell_padding(cell, top=CELL_PAD, start=CELL_PAD, bottom=CELL_PAD, end=CELL_PAD)
-            # Font styling
             for paragraph in cell.paragraphs:
                 for run in paragraph.runs:
                     run.font.name = 'Arial'
                     run.font.size = Pt(10)
-
-            if row_idx == 0:
-                # Header row: dark background, white bold text
-                set_cell_shading(cell, HEADER_COLOR)
-                for paragraph in cell.paragraphs:
-                    for run in paragraph.runs:
-                        run.font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
+                    if row_idx == 0:
                         run.bold = True
-            elif row_idx % 2 == 0:
-                # Alternating band on even data rows
-                set_cell_shading(cell, ALT_ROW_COLOR)
 
 def export_to_docx(markdown_path, docx_path):
     doc = Document()

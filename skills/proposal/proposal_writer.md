@@ -7,7 +7,7 @@ Act as a Senior McKinsey Partner writing a proposal for a "counseling SOW" (Stat
 ## Execution Guidelines
 
 - **Context Gathering**: Before drafting the proposal, you must always search for and read the relevant context file (e.g., `<client_name>_context.md`). You should look for this in the user's dedicated local directory for work products (users should create their own directory for this purpose and ensure it is added to their `.gitignore`). This context document will contain the specific engagement objectives, fee structures, and deliverables necessary to write an accurate, tailored proposal.
-- **Reference Material**: Review the example proposal at `examples/sample_proposal.md` for structure and tone before drafting. Use it as a baseline, not a template to copy.
+- **Reference Material**: Review the example proposal at `examples/lumina_proposal.md` for structure and tone before drafting. Use it as a baseline, not a template to copy.
 
 ## Tone and Voice
 
@@ -47,7 +47,7 @@ Keep the structure streamlined and elegant. The title should follow the format: 
    - Include a brief transition sentence, then a bulleted list explaining the **fee calculation methodology**. The methodology should address three pillars:
      - **Value alignment** with the client (e.g., aiming to stay below the fully loaded cost of an equivalent FTE while reflecting unique expertise).
      - **Contractor overhead** (e.g., self-employment taxes, insurance, business expenses, and utilization risk).
-     - **Market rate validation**, grounded in personal hiring experience and direct research (e.g., interviews with former contract owners and Senior Advisors), with specific comparable per diem rates by category (MBB, GPs, large tech, startups).
+     - **Market rate validation**, grounded in personal hiring experience and direct research (e.g., interviews with former contract owners and Senior Advisors). This should be presented as a simple markdown table with columns such as: Market Segment, Per Diem, Monthly (50%), Monthly (100%), and Additional Upside. Categories should include MBB, GPs, large tech, and fractional executives. (Note: The export scripts are configured to render these tables in a simple, clear executive style with bold headers and minimal shading.)
    - Present the **Fee Structure** using the bold label `**Fee Structure:**`. Use a single recommended structure with **Structure**, **Mechanism**, and **Rationale** sub-items. Follow with supplementary bullets for: rationale for declining alternative fee models the client may have raised (e.g., performance-based), expense reimbursement policy, and invoicing entity.
    - Present **Contract Term Options** using the bold label `**Contract Term Options:**`. List each option (e.g., Option A, Option B) with **Structure** and **Rationale** sub-items. Mark the recommended option.
 6. **Support Needed**: The administrative and logistical support required to facilitate the partnership, presented as a clean bulleted list (e.g., credentials, hardware, software access, team access).

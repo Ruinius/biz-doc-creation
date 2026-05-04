@@ -66,26 +66,27 @@ def export_to_pdf(markdown_path, pdf_path):
             }}
             table {{
                 width: 100%;
+                table-layout: fixed;
                 border-collapse: collapse;
                 margin-top: 15px;
                 margin-bottom: 20px;
-                font-size: 10.5pt;
+                font-size: 9pt;
             }}
             th {{
-                background-color: #2c3e50;
-                color: #ffffff;
                 text-align: left;
-                padding: 10px;
-                border: 1px solid #2c3e50;
+                padding: 6px;
+                border: 1px solid #bdc3c7;
                 font-weight: bold;
+                color: #333;
+                word-wrap: break-word;
+                overflow: hidden;
             }}
             td {{
-                padding: 10px;
+                padding: 6px;
                 border: 1px solid #bdc3c7;
                 color: #333;
-            }}
-            tr:nth-child(even) {{
-                background-color: #f8f9fa;
+                word-wrap: break-word;
+                overflow: hidden;
             }}
         </style>
     </head>

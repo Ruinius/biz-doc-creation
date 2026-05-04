@@ -32,6 +32,9 @@ biz-doc-creation/
 │       ├── export_docx.py  # Markdown to Word converter
 │       └── export_pdf.py   # Markdown to PDF converter
 ├── tiger_work_products/    # User active working directory (GIT IGNORED)
+│   ├── gic_proposal.md     # Active GIC engagement proposal
+│   ├── gic_proposal.docx   # Word export of the GIC proposal
+│   └── gic_proposal.pdf    # PDF export of the GIC proposal
 └── pyproject.toml          # Project dependencies
 ```
 

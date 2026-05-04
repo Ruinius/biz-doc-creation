@@ -17,6 +17,7 @@
 - [x] Define context-file-driven workflow
 - [x] Create sample context and proposal examples
 - [x] Test and refine professional styling
+- [x] Implement simple, clear table rendering for Word and PDF exports
 
 ## Phase 4: Additional Document Types (Planned)
 - [ ] Implement Letter of Intent (LOI) generation skill
