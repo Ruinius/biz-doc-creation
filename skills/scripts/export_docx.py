@@ -6,15 +6,33 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn, nsdecls
 from docx.oxml import parse_xml
 
-def process_bold_text(paragraph, text):
-    """Splits text by ** and alternates adding normal and bold runs."""
-    parts = re.split(r'\*\*(.*?)\*\*', text)
-    for i, part in enumerate(parts):
-        if not part:
-            continue
-        run = paragraph.add_run(part)
-        if i % 2 == 1:
+def process_markdown_styles(paragraph, text):
+    """Parses text for bold (** or __) and italics (* or _) and adds appropriate runs."""
+    # Pattern to find bold and italic segments
+    pattern = r'(\*\*(?P<bold1>.*?)\*\*|__(?P<bold2>.*?)__|_(?P<italic1>.*?)_|\*(?P<italic2>.*?)\*)'
+    
+    last_idx = 0
+    for match in re.finditer(pattern, text):
+        # Add preceding normal text
+        if match.start() > last_idx:
+            paragraph.add_run(text[last_idx:match.start()])
+        
+        # Add styled text
+        m_bold = match.group('bold1') or match.group('bold2')
+        m_italic = match.group('italic1') or match.group('italic2')
+        
+        if m_bold:
+            run = paragraph.add_run(m_bold)
             run.bold = True
+        elif m_italic:
+            run = paragraph.add_run(m_italic)
+            run.italic = True
+        
+        last_idx = match.end()
+    
+    # Add remaining normal text
+    if last_idx < len(text):
+        paragraph.add_run(text[last_idx:])
 
 def set_cell_padding(cell, top=0, start=0, bottom=0, end=0):
     """Set cell margins (padding) in EMUs. Helper for readable table cells."""
@@ -46,6 +64,7 @@ def style_table(table):
         for cell in row.cells:
             set_cell_padding(cell, top=CELL_PAD, start=CELL_PAD, bottom=CELL_PAD, end=CELL_PAD)
             for paragraph in cell.paragraphs:
+                paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT
                 for run in paragraph.runs:
                     run.font.name = 'Arial'
                     run.font.size = Pt(10)
@@ -55,11 +74,19 @@ def style_table(table):
 def export_to_docx(markdown_path, docx_path):
     doc = Document()
     
+    # Set "Normal" page margins: 1 inch on all sides
+    for section in doc.sections:
+        section.top_margin = Inches(1)
+        section.bottom_margin = Inches(1)
+        section.left_margin = Inches(1)
+        section.right_margin = Inches(1)
+
     # Optional: Customize default styles for a "beautiful" look
     style = doc.styles['Normal']
     font = style.font
     font.name = 'Arial'
     font.size = Pt(11)
+    style.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
     
     # Heading 1 style
     h1_style = doc.styles['Heading 1']
@@ -107,7 +134,7 @@ def export_to_docx(markdown_path, docx_path):
                 for i, cell_text in enumerate(cells):
                     if i < len(hdr_cells):
                         p = hdr_cells[i].paragraphs[0]
-                        process_bold_text(p, cell_text)
+                        process_markdown_styles(p, cell_text)
                         for run in p.runs:
                             run.bold = True
             else:
@@ -115,7 +142,7 @@ def export_to_docx(markdown_path, docx_path):
                 for i, cell_text in enumerate(cells):
                     if i < len(row_cells):
                         p = row_cells[i].paragraphs[0]
-                        process_bold_text(p, cell_text)
+                        process_markdown_styles(p, cell_text)
             continue
         else:
             in_table = False
@@ -123,10 +150,10 @@ def export_to_docx(markdown_path, docx_path):
 
         if content.startswith('# '):
             p = doc.add_heading(level=1)
-            process_bold_text(p, content[2:])
+            process_markdown_styles(p, content[2:])
         elif content.startswith('## '):
             p = doc.add_heading(level=2)
-            process_bold_text(p, content[3:])
+            process_markdown_styles(p, content[3:])
         elif content.startswith('- ') or content.startswith('* '):
             level = leading_spaces // 2
             style_name = 'List Bullet' if level == 0 else f'List Bullet {level + 1}'
@@ -135,11 +162,11 @@ def export_to_docx(markdown_path, docx_path):
             except KeyError:
                 # Fallback if style doesn't exist
                 p = doc.add_paragraph(style='List Bullet')
-            process_bold_text(p, content[2:])
+            process_markdown_styles(p, content[2:])
         else:
             p = doc.add_paragraph()
-            p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-            process_bold_text(p, content)
+            p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+            process_markdown_styles(p, content)
 
     # Style any table that was still open at end of file
     if in_table and current_table:
