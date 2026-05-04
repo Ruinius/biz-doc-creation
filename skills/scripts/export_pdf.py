@@ -66,27 +66,29 @@ def export_to_pdf(markdown_path, pdf_path):
             }}
             table {{
                 width: 100%;
-                table-layout: fixed;
                 border-collapse: collapse;
-                margin-top: 15px;
-                margin-bottom: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
                 font-size: 9pt;
             }}
             th {{
                 text-align: left;
-                padding: 6px;
+                padding: 5px;
                 border: 1px solid #bdc3c7;
                 font-weight: bold;
                 color: #333;
                 word-wrap: break-word;
-                overflow: hidden;
+                vertical-align: top;
             }}
             td {{
-                padding: 6px;
+                padding: 5px;
                 border: 1px solid #bdc3c7;
                 color: #333;
                 word-wrap: break-word;
-                overflow: hidden;
+                vertical-align: top;
+            }}
+            th:first-child, td:first-child {{
+                width: 35%;
             }}
         </style>
     </head>
