@@ -15,7 +15,11 @@ def export_to_pdf(markdown_path, pdf_path):
     md_text = md_text.replace('\u201C', '"').replace('\u201D', '"') # Smart double quotes
 
     # Convert markdown to html
-    html_content = markdown.markdown(md_text, extensions=['extra'])
+    html_content = markdown.markdown(md_text, extensions=['extra', 'tables'])
+
+    # Wrap tables in a div to help xhtml2pdf handle page-break-inside: avoid
+    import re
+    html_content = re.sub(r'(<table>.*?</table>)', r'<div class="table-wrapper">\1</div>', html_content, flags=re.DOTALL)
 
     # Wrap in basic HTML structure and apply beautiful styling
     html_string = f"""
@@ -26,7 +30,7 @@ def export_to_pdf(markdown_path, pdf_path):
         <title>Document</title>
         <style>
             @page {{
-                size: a4;
+                size: letter;
                 margin: 2cm;
             }}
             body {{
@@ -52,7 +56,7 @@ def export_to_pdf(markdown_path, pdf_path):
             }}
             p {{
                 margin-bottom: 12px;
-                text-align: justify;
+                text-align: left;
             }}
             ul {{
                 margin-bottom: 12px;
@@ -64,12 +68,21 @@ def export_to_pdf(markdown_path, pdf_path):
                 font-weight: bold;
                 color: #1a252f;
             }}
+            .table-wrapper {{
+                page-break-inside: avoid;
+                display: block;
+                width: 100%;
+            }}
+            tr {{
+                page-break-inside: avoid;
+            }}
             table {{
                 width: 100%;
                 border-collapse: collapse;
                 margin-top: 10px;
                 margin-bottom: 10px;
                 font-size: 9pt;
+                page-break-inside: avoid;
             }}
             th {{
                 text-align: left;
