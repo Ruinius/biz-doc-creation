@@ -1,11 +1,11 @@
-# Documentation Index
+# Documentation Index (AGENTS.md)
 
-This file serves as the primary index for the project's documentation, located in the `docs/` directory.
+This file serves as the primary index for the project's documentation, structure, and agent instructions.
 
 ## Core Documentation
-- [Product Specification](PRODUCT_SPEC.md): Outlines the goals, features, and requirements of the project.
-- [System Design](SYSTEM_DESIGN.md): Details the architecture, data models, and technical approach.
-- [Roadmap](ROADMAP.md): Tracks project milestones, planned features, and progress.
+- [Product Specification](docs/PRODUCT_SPEC.md): Outlines the goals, features, and requirements of the project.
+- [System Design](docs/SYSTEM_DESIGN.md): Details the architecture, data models, and technical approach.
+- [Roadmap](docs/ROADMAP.md): Tracks project milestones, planned features, and progress.
 
 *Always keep this index and the corresponding documentation up-to-date with code changes.*
 
@@ -14,9 +14,9 @@ This file serves as the primary index for the project's documentation, located i
 ```text
 biz-doc-creation/
 ├── .agents/                # Antigravity workspace rules and behaviors
+├── AGENTS.md               # This documentation index and rules file (moved from docs/DOC_INDEX.md)
 ├── assets/                 # Brand assets and images
 ├── docs/                   # Core project documentation
-│   ├── DOC_INDEX.md        # This file
 │   ├── PRODUCT_SPEC.md     # Product goals and features
 │   ├── ROADMAP.md          # Project milestones
 │   └── SYSTEM_DESIGN.md    # Architecture and data models
